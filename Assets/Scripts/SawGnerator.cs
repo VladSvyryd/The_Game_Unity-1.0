@@ -5,7 +5,7 @@ using UnityEngine;
 public class SawGnerator : MonoBehaviour {
 
     public Objectpoller pickUpsPool;
-
+    private float adwaf;
     public float distanceBetweenPickUps;
     private SawGnerator sawGenerator;
     
