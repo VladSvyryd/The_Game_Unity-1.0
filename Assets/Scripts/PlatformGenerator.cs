@@ -8,7 +8,7 @@ public class PlatformGenerator : MonoBehaviour {
     private PickUpsGenerator pickupsGenerator;
 
     private SawGnerator sawGenerator;
-    public float sawtimer;
+    
 
     public Objectpoller [] theObjectPools;
     public GameObject thePlatform;
@@ -85,12 +85,11 @@ public class PlatformGenerator : MonoBehaviour {
 
 
 
-            sawtimer = Time.fixedTime;
-            if (sawtimer > 3)
-            {
-            sawGenerator.SpawnSaw(new Vector3(transform.position.x, transform.position.y, transform.position.z));
-                sawtimer = 0;
-            }
+            
+            
+            sawGenerator.SpawnSaw(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z));
+             
+            
            
 
             transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector]) / 2, transform.position.y, transform.position.z);
